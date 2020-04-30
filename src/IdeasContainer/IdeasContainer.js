@@ -4,7 +4,6 @@ import Idea from '../Idea/Idea';
 const IdeasContainer = ({ ideas }) => {
 
     const allIdeas = ideas.map((idea) => {
-        console.log(idea)
         return (
             <Idea 
                 idea={idea.idea}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import IdeaForm from './IdeaForm/IdeaForm';
-import IdeasContainer from './IdeasContainer/IdeasContainer';
+import IdeaForm from '../IdeaForm/IdeaForm';
+import IdeasContainer from '../IdeasContainer/IdeasContainer';
 import './App.css';
 
 const App = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Idea = () => {
+const Idea = ({ idea }) => {
     return (
-        <li></li>
+        <li>{ idea }</li>
     )
 }
 export default Idea;

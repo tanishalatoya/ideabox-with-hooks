@@ -8,7 +8,10 @@ const App = () => {
   const [ideas, setIdeas] = useState([])
 
   const addIdea = idea => {
-    const newIdeas = [...ideas, { idea }];
+    const newIdeas = [...ideas, { 
+      idea: idea, 
+      id: Date.now() 
+    }];
     setIdeas(newIdeas)
   }
 

@@ -14,9 +14,7 @@ const IdeasContainer = ({ ideas }) => {
     })
     return (
         <section>
-            <ul>
-                { allIdeas }
-            </ul>
+            { allIdeas }
         </section>
     )
 }

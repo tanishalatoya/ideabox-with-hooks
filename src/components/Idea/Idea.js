@@ -2,7 +2,11 @@ import React from 'react';
 
 const Idea = ({ idea }) => {
     return (
-        <li>{ idea }</li>
+        <div>
+            <p>{idea}</p>
+            <button>Completed</button>
+            <button>Delete</button>
+        </div>
     )
 }
 export default Idea;

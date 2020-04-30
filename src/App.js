@@ -4,7 +4,14 @@ import IdeasContainer from './IdeasContainer/IdeasContainer';
 import './App.css';
 
 const App = () => {
-  const [ideas, addIdea] = useState([])
+
+  const [ideas, setIdeas] = useState([])
+
+  const addIdea = idea => {
+    const newIdeas = [...ideas, { idea }];
+    setIdeas(newIdeas)
+  }
+
   return (
     <main>
       <h1>Ideabox with Hooks</h1>

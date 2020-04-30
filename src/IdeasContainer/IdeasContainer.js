@@ -2,9 +2,15 @@ import React from 'react';
 import Idea from '../Idea/Idea';
 
 const IdeasContainer = ({ ideas }) => {
+
     const allIdeas = ideas.map((idea) => {
+        console.log(idea)
         return (
-            <Idea />
+            <Idea 
+                idea={idea.idea}
+                key={idea.id}
+                id={idea.id}
+            />
         )
     })
     return (

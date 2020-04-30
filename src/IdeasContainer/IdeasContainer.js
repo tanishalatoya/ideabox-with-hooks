@@ -1,10 +1,16 @@
 import React from 'react';
+import Idea from '../Idea/Idea';
 
-const IdeasContainer = () => {
+const IdeasContainer = ({ ideas }) => {
+    const allIdeas = ideas.map((idea) => {
+        return (
+            <Idea />
+        )
+    })
     return (
         <section>
             <ul>
-                {/* { allIdeas } */}
+                { allIdeas }
             </ul>
         </section>
     )

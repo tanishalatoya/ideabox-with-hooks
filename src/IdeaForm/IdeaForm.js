@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 
 const IdeaForm = ({ addIdea }) => {
 
-    const [idea, setIdea] = useState('')
-
-    const handleChange = e => {
-        setIdea(e.target.value)
-    }
+    const [value, setValue] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
+        addIdea(value)
+        setValue('')
     }
 
     return (
@@ -17,7 +15,8 @@ const IdeaForm = ({ addIdea }) => {
             <input 
                 type='text'
                 placeholder='My idea is...'
-                onChange={handleChange}
+                value={value}
+                onChange={e => setValue(e.target.value)}
                 />
             <button>
                 Add Idea

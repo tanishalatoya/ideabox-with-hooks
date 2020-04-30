@@ -10,8 +10,7 @@ const App = () => {
   const addIdea = idea => {
     const newIdeas = [...ideas, { 
       idea: idea, 
-      id: Date.now(),
-      isComplete: false
+      id: Date.now()
     }];
     setIdeas(newIdeas)
   }

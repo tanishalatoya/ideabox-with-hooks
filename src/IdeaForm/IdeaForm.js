@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const IdeaForm = () => {
+const IdeaForm = ({ addIdea }) => {
+
+    const [idea, setIdea] = useState('')
+
+    const handleChange = e => {
+        setIdea(e.target.value)
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+    }
+
     return (
-        <form>
-            
+        <form onSubmit={handleSubmit}>
+            <input 
+                type='text'
+                placeholder='My idea is...'
+                onChange={handleChange}
+                />
+            <button>
+                Add Idea
+            </button>
         </form>
     )
 }

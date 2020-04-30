@@ -16,11 +16,18 @@ const App = () => {
     setIdeas(newIdeas)
   }
 
+  const deleteIdea = id => {
+    const updatedIdeas = ideas.filter(idea => id !== idea.id)
+    setIdeas(updatedIdeas)
+  }
+
   return (
     <main>
       <h1>Ideabox with Hooks</h1>
       <IdeaForm addIdea={addIdea}/>
-      <IdeasContainer ideas={ideas} />
+      <IdeasContainer 
+        ideas={ideas}
+        deleteIdea={deleteIdea} />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Idea from '../Idea/Idea';
 
-const IdeasContainer = ({ ideas }) => {
+const IdeasContainer = ({ ideas, deleteIdea }) => {
 
     const allIdeas = ideas.map((idea) => {
         return (
@@ -9,6 +9,7 @@ const IdeasContainer = ({ ideas }) => {
                 idea={idea.idea}
                 key={idea.id}
                 id={idea.id}
+                deleteIdea={deleteIdea}
             />
         )
     })
